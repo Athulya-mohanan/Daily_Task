@@ -1,0 +1,5 @@
+let date=new Date()
+console.log("current date:",`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`)
+console.log("current Time:",`${date.toLocaleTimeString()}`)
+console.log("UTC Formate Date",`${date.getUTCDate()}/${date.getUTCMonth()+1}/${date.getUTCFullYear()}`)
+console.log("UTC Time:",date.toUTCString())

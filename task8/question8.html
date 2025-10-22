@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .card{
+        border: 1px solid black;
+        box-shadow: 2px 2px 10px black;
+    }
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #like{
+        display: none;
+    }
+    #unlike{
+        display: none;
+    }
+    #like_button{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    }
+   
+</style>
+<body>
+    <div class="card_container">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/bd/a4/18/bda41895a6643d37b20f2ec6b8193327.jpg">
+            <p>“The average dog is a nicer person than the average person."</p>
+            <div id="like_button">
+                <img src="/icons/unlike.png" id="unlike" >
+                <img src="/icons/like.png" id="like" >
+            </div>
+        </div> 
+    </div>
+    <script src="question8.js"></script>
+</body>
+</html>
