@@ -1,7 +1,7 @@
 function sumofArray(arr) {
   let array=[]
   let sum=0
-  for(i=0;i<arr.length;i++){
+  for(let i=0;i<arr.length;i++){
     let str=arr[i].toString().split(",").join("")
     array.push(Number(str))
   }
