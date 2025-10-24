@@ -11,13 +11,11 @@ const students = [
     { name: "Bob", marks: 67 },
     { name: "Charlie", marks: 35 }
 ];
-students.forEach((data) => {
-    if (data.marks > 50) {
-        data.status = "Pass";
-    }
-    else {
-        data.status = "Fail";
-    }
+const result = students.map((student) => {
+    return {
+        name: student.name,
+        status: student.marks > 50 ? "Pass" : "Fail"
+    };
 });
-console.log(students);
+console.log(result);
 //# sourceMappingURL=question7A.js.map

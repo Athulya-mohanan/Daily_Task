@@ -20,15 +20,11 @@ const students:Student[]=[
    {name:"Charlie",marks:35}
 ];
 
-
-students.forEach((data:Student&{status?:string})=>{
-    if(data.marks>50){
-        data.status="Pass"
+const result=students.map((student)=>{
+    return{
+        name:student.name,
+        status:student.marks>50?"Pass":"Fail"
     }
-    else{
-        data.status="Fail"
-    }
-    
 })
- console.log(students)
+ console.log(result)
 
