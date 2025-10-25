@@ -1,11 +1,17 @@
-let new_promise =new Promise((resolve,reject)=>{
-    let networkError=true
-    setTimeout(()=>{
-        networkError?reject("Network error"):resolve("Successfull")
-    },1000)
-    
+const container=document.getElementById("container")
+const progressBar=document.getElementById("progress_range")
+window.addEventListener("scroll",()=>{
+    const scrolltop=window.scrollY;
+    const scrollHeight=document.body.scrollHeight-window.innerHeight
+    const scrollPercentage=(scrolltop/scrollHeight)*100;
+    progressBar.style.width=scrollPercentage+"%"
+    progressBar.style.fontSize="22px"
+    progressBar.style.color="white"
+    progressBar.style.fontWeight="600"
+    if(scrollPercentage>100){
+        progressBar.textContent="100% Completed"
+    }
+    else{
+        progressBar.textContent="Loading "+Math.floor(scrollPercentage)+"%"
+    }
 })
-
-new_promise
-.then((success)=>console.log(success))
-.catch((rejected)=>console.log(rejected))

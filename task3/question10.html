@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        text-align: center;
+    }
+    #display_image{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    #display_image div{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    #display_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #display_image input[type="checkbox"]{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    #display_image button{
+        position: absolute;
+        top:5px;
+        right: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 2px 6px;
+    }
+    #message{
+        margin-top: 15px;
+        color: gray;
+        
+    }
+</style>
 <body>
-    <input type="file" id="image_input" accept="image/png,image/jpg">
+    <input type="file" id="image_input" accept="image/png,image/jpeg">
+    <button id="delete_btn">Delete Selected</button>
+    <div id="message">Upload images to see</div>
     <div id="display_image"></div>
     <script src="question10.js"></script>
 </body>

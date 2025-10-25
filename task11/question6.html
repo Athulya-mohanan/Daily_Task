@@ -6,31 +6,30 @@
     <title>Document</title>
 </head>
 <style>
-    #table_content{
+    #display_table{
         border: 1px solid black;
         width: 30%;
         text-align: center;
-
     }
     th{
-        border-bottom: 1px solid black;
+        border: 1px solid black;
     }
     input{
         margin-bottom: 10px;
     }
-   body{
-    padding-left: 100px;
-   }
+    body{
+        padding-left: 100px;
+    }
 </style>
 <body>
-    <h1>Logs  pressed key</h1>
-    <label>Enter a value</label>
-    <input type="text" id="input_box" maxlength="10">
-    <table id="table_content">
-        <th>Key Pressed</th>
-        <th>Key code</th>
+    <table id="display_table">
+        <h1>Logs Pressed Keys</h1>
+        <label>Enter a value</label>
+        <input type="text" id="input_value">
+        <th>Key</th>
+        <th>Code</th>
+        <th>Timestamp</th>
     </table>
-      <p id="print_limit"></p>
-    <script src="question4.js"></script>
+    <script src="question6.js"></script>
 </body>
 </html>

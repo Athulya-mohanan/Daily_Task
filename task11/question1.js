@@ -1,10 +1,7 @@
-const new_promise= new Promise((resolve)=>{
-    setTimeout(()=>{
-        resolve()
-    },2000)
-})
-function handleFullFill(){
-    console.log("Data Loaded")
+function deepClone(obj){
+   let copiedObject=JSON.parse(JSON.stringify(obj))
+    obj.user.age=40
+    console.log("Original :",obj)
+    console.log("Copied :",copiedObject)
 }
-new_promise
-.then(handleFullFill)
+deepClone({user: { name: 'John', age: 25 },skill: 'JavaScript', country: 'US', dataTypes: ['string', 'number', 'boolean', 'object', 'null', 'undefined']})
