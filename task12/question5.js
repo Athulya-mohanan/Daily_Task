@@ -7,24 +7,24 @@
 
 
  function checkObjectEquality(obj1,obj2){
-    let result;
+  
     // return JSON.stringify(obj1)===JSON.stringify(obj2)
     let newobj1=Object.entries(obj1).sort()
     let newobj2=Object.entries(obj2).sort()
 
-    for(let i=0;i<newobj1.length;i++){
+  
        
-        for(let j=0;j<newobj2.length;j++){
-            if(newobj1[i].toString()!=newobj2[j].toString()){
-                result=false
+        for(let i=0;i<newobj1.length;i++){
+            if(newobj1[i].toString()!==newobj2[i].toString()){
+                return "not equal"
             }
             else{
-                result= true
+                return "equal"
             }
         }       
         
-    }
+    
    
-   return result
+
 }
 console.log(checkObjectEquality({ a:3,b:4}, { a: 3, b: 4 }))

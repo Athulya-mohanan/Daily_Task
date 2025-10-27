@@ -4,16 +4,7 @@
 // Output: [10, 15, 22, 40] or [10, 20, 30, 40] or [10, 15, 30, 40]
 
 function highestIncresing(arr){
-    let result=[]
-    console.log(arr)
-    for(i=0;i<4;i++){
-        if(result.length<=3){
-            result.push(randomNumberArray(arr))
-            console.log(result.length)
-        }
-      
-      
-    }
+   
     // let resultarr=[]
     // let randomarr=[]
     // let sorted=arr.sort().splice(0,2)
