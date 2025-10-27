@@ -1,18 +1,30 @@
-function daysCountDown(target){
-    let trgt= new Date(target).getTime()
-    const timer=setInterval(()=>{
-        let currentTime= new Date().getTime()
-        const timeDifference=trgt-currentTime
-        if(timeDifference<=0){
-            clearInterval(timer)
-            console.log("Countdown Finished!")
-            return
-        }
-        let days=Math.floor(timeDifference/(1000*60*60*24))
-        let hours=Math.floor((timeDifference%(1000*60*60*24))/(1000*60*60))
-        let mins=Math.floor((timeDifference%(1000*60*60))/(1000*60))
-        let secs=Math.floor((timeDifference%(1000*60))/1000)
-        console.log(`${days} days ${hours} hours ${mins} mins ${secs} seconds`)
-    },1000)
+
+// 5. Write a function to check object equality. Which receives two objects as arguments, and it should return "Equal" if both contain same keys, values, "Not Equal" if not.
+
+// Test cases:
+// Input: { a: 1, b: 2 }, { b: 3, c: 4 }
+// Output: "Not Equal"
+
+
+ function checkObjectEquality(obj1,obj2){
+    let result;
+    // return JSON.stringify(obj1)===JSON.stringify(obj2)
+    let newobj1=Object.entries(obj1).sort()
+    let newobj2=Object.entries(obj2).sort()
+
+    for(let i=0;i<newobj1.length;i++){
+       
+        for(let j=0;j<newobj2.length;j++){
+            if(newobj1[i].toString()!=newobj2[j].toString()){
+                result=false
+            }
+            else{
+                result= true
+            }
+        }       
+        
+    }
+   
+   return result
 }
-daysCountDown("2025-10-26")
+console.log(checkObjectEquality({ a:3,b:4}, { a: 3, b: 4 }))

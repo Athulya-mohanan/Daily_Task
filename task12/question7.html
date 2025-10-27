@@ -1,0 +1,65 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  ul{
+      display: flex;
+      flex-direction: column;
+  }
+  .tooltip{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 12px;
+  }
+  .tooltiptext{
+    visibility: hidden;
+    width: 130px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext{
+    visibility: visible;
+  }
+  .container{
+    width: 1200px;
+    
+  }
+  .list{
+    white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 120px;
+  }
+</style>
+<body>
+    <div class="container">
+      <ul>
+        <li class="tooltip"><p class="list"><b>Spirited Away</b>
+            - Hayo Miyazaki</p> <span class="tooltiptext">Spirited Away
+            - Hayo Miyazaki</span></li>
+            <li class="tooltip"><p class="list"><b>Your Name</b>
+          Makoto shinkai </p> <span class="tooltiptext">Your Name-
+             Makoto shinkai</span></li>
+
+               <li class="tooltip"><p class="list"><b>Death Note</b>
+          Tesuro Araki </p><span class="tooltiptext">Death Note-Tesuro Araki
+             </span></li>
+            
+      </ul>
+    </div>
+</body>
+</html>
