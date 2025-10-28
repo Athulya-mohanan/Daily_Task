@@ -15,3 +15,4 @@ function longestWord(arr){
    return result 
 }
 console.log(longestWord("I love coding"))
+

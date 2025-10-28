@@ -1,9 +1,9 @@
 const container=document.getElementById("container")
 const progressBar=document.getElementById("progress_range")
 window.addEventListener("scroll",()=>{
-    const scrolltop=window.scrollY;
-    const scrollHeight=document.body.scrollHeight-window.innerHeight
-    const scrollPercentage=(scrolltop/scrollHeight)*100;
+    const scrolltop=window.scrollY; // gives how many pixel the user has scrolled from the top of the page
+    const scrollHeights=document.body.scrollHeight-window.innerHeight // total height of the whole webpage- visible part(screen height)
+    const scrollPercentage=(scrolltop/scrollHeights)*100;
     progressBar.style.width=scrollPercentage+"%"
     progressBar.style.fontSize="22px"
     progressBar.style.color="white"

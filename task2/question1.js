@@ -1,5 +1,6 @@
 function isPrime(num) {
   let result;
+  if(num<0 || typeof(num)!=="number" || Math.round(num)!==num) return "Invalid input"
   if(num==0||num==1){
     result="Enter a valid number(0 and 1 are not valid)"
   }
@@ -13,6 +14,76 @@ function isPrime(num) {
   }
   return result;
 }
-console.log(isPrime(7))
-console.log(isPrime(10))
-console.log(isPrime(29));
+testCase=[
+  {
+    input:9,
+    expected:true
+  },
+  {
+    input:-9,
+    expected:"Invalid input"
+  },
+  {
+    input:1.6,
+    expected:"Invalid input"
+  },
+  {
+    input:"123",
+    expected:"Invald input"
+  },
+  {
+    input:123,
+    expected:false
+  },
+  {
+    input:"",
+    expected:"Invalid input"
+  },
+  {
+    input:null,
+    expected:"Invalid input"
+  },
+  {
+    input:undefined,
+    expected:"Invalid input"
+  },
+  {
+    input:[1,2,3],
+    expected:"Invalid input"
+  },
+  {
+    input:{},
+    expected:"Invalid input"
+  },
+  {
+    input:1,
+    expected:" Enter a valid number(0 and 1 are not valid)"
+  },
+  {
+    input:0,
+    expected:" Enter a valid number(0 and 1 are not valid)"
+  },
+  {
+    input:[{}],
+     expected:"Invalid input"
+  },
+  {
+    input:{name:"Doe"},
+    expected:"Invalid input"
+  },
+  {
+    input:12/2,
+    expected:false
+  },
+ 
+
+]
+testCase.forEach((num,index)=>{
+  let output=isPrime(num.input)
+  pass=JSON.stringify(output)===JSON.stringify(num.expected)
+  console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
+  console.log("Input",num.input)
+  console.log("Expected",num.expected)
+  console.log("Got",output)
+  console.log("-----------------------------------")
+})
