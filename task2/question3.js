@@ -1,14 +1,15 @@
+import { utilFunction } from "../util.js"
 function isEven(list){
     if(!Array.isArray(list)|| list.length===0) return "Invalid input"
     let evenlist=[]
-    for( i in list){
+    for( let i in list){
         // if(typeof(i)!=="number") return "Invalid input"
         if(list[i]%2==0 ) 
             evenlist.push(list[i])
     }
     return evenlist
 }
-testCase=[
+let testCase=[
     {
         input:[2, 4, 6, 8, 10],
         expected:[2,4,6,8,10]
@@ -76,8 +77,8 @@ testCase=[
 ]
 testCase.forEach((num,index)=>{
     let output=isEven(num.input)
-    const pass=output.toString()===num.expected.toString()
-    console.log(`Test ${index+1} :`, pass?"Passed":"Failed")
+    const pass=utilFunction(output,num.expected)
+    console.log(`Test ${index+1} :`, pass)
          console.log(`Input : ${num.input}`)
         console.log(`Expected : ${num.expected}`)
         console.log(`Got :${output}`)

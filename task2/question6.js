@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function sumOfDivisible(arr){
       if(!Array.isArray(arr)) return "Invalid input"
     let sum=0
@@ -9,7 +10,7 @@ function sumOfDivisible(arr){
     return sum
 }
 // console.log(sumOfDivisible([15, 25, 35, 45,55]))
-testcase=[
+let testcase=[
     {
         input:[15, 25, 35, 45,55],
         expected:60
@@ -68,13 +69,15 @@ testcase=[
     },
     {
         input:["hello"],
-        expected:0
+        expected: 0
     },
 ]
 testcase.forEach((num,index)=>{
     let output=sumOfDivisible(num.input)
-    const pass=output.toString()===num.expected.toString()
-    console.log(`Test ${index+1} :`,pass?"Passed":"Failed")
+    const pass=utilFunction(output,num.expected)
+    console.log("exx",typeof(num.expected))
+    console.log("g",typeof(output))
+    console.log(`Test ${index+1} :`,pass)
     console.log(`Input :${num.input}`)
     console.log(`Expected:${num.expected}`)
     console.log("Got:",output)

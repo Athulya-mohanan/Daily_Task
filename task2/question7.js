@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function longestWord(arr){
      if(Array.isArray(arr)|| typeof(arr)!=="string"|| arr.trim().length===0) return "Invalid input"
   
@@ -77,14 +78,14 @@ let testCase=[
      },
      {
           input:"  hello hey  ",
-          expected:["hello"]
+          expected:['hello']
      }
 ]
 
 testCase.forEach((cases,index)=>{
      let output=longestWord(cases.input)
-     let pass=output.toString()===cases.expected.toString()
-     console.log(`Test :${index+1}`,pass?"Passed":"Failed")
+     let pass=utilFunction(output,cases.expected)
+     console.log(`Test :${index+1}`,pass)
      console.log("Input:",cases.input)
      console.log("Expected",cases.expected)
      console.log("Got",output)

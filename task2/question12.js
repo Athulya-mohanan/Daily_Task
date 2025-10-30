@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function maxProduct(arr){
   
    if(!Array.isArray(arr)) return "invalid input"
@@ -10,7 +11,7 @@ function maxProduct(arr){
       }
     }
    let sorted=newarray.sort((a,b)=>b-a)
-   for(i=0;i<3;i++){
+   for(let i=0;i<3;i++){
     product=product*Math.round(sorted[i])
    }
 
@@ -80,8 +81,8 @@ let testCase=[
 ]
 testCase.forEach((num,index)=>{
    let output=maxProduct(num.input)
-   let pass=output.toString()===num.expected.toString()
-   console.log(`Test : ${index+1}`,pass?"Pass":"Failed")
+   let pass=utilFunction(output,num.expected)
+   console.log(`Test : ${index+1}`,pass)
    console.log("Input :",num.input)
    console.log("Expected :",num.expected)
    console.log("Got :",output)

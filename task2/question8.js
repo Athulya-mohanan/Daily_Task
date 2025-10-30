@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function missingNumber(arr){
     // console.log(typeof(arr))
     if(arr.length===0||!Array.isArray(arr)) return "Invalid input"
@@ -16,7 +17,7 @@ function missingNumber(arr){
     }else if(arr[0]>2){
         return "More than one numbers are missing"
     }
-   for(i=0;i<arrayIndex.length;i++){
+   for(let i=0;i<arrayIndex.length;i++){
     if(arrayIndex[i]!==arr[i])
         result.push(arrayIndex[i])
    }  
@@ -101,8 +102,8 @@ let testCase=[
 ]
 testCase.forEach((num,index)=>{
     let output=missingNumber(num.input)
-    let pass=output.toString()===num.expected.toString()
-    console.log(`Test : ${index+1}`,pass?"Pass":"Fail")
+    let pass=utilFunction(output,num.expected)
+    console.log(`Test : ${index+1}`,pass)
     console.log("Input :",num.input)
     console.log("Expected :",num.expected)
     console.log("Got :",output)

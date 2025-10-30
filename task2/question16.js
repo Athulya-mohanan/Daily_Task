@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function arrayLengthSort(arr){
     if(!Array.isArray(arr)) return "Invalid input"
     for(let i of arr){
@@ -91,8 +92,9 @@ let testCase=[
 ]
 testCase.forEach((obj,index)=>{
     let output=arrayLengthSort(obj.input)
-    const pass=output.toString()===obj.expected.toString()
-    console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
+
+    const pass=utilFunction(output,obj.expected)
+    console.log(`Test: ${index+1}`,pass)
     console.log(`Input`,obj.input)
     console.log(`Expected: `,obj.expected)
     console.log(`Got:`,output)

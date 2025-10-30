@@ -1,3 +1,4 @@
+import { utilFunction } from "../util.js"
 function largestWord(arr){
     if(!Array.isArray(arr)) return "Invalid input"
     for(let i of arr){
@@ -5,7 +6,7 @@ function largestWord(arr){
             return "Array must contain strings"
     }
     let len=[]
-    result=[]
+    let result=[]
     for(let i in arr){
         len.push(arr[i].length)
     }
@@ -84,8 +85,8 @@ let testCase=[
 
 testCase.forEach((num,index)=>{
     let output=largestWord(num.input)
-    let pass=output.toString()===num.expected.toString()
-    console.log(`Task :${index+1}`,pass?"Pass":"Fail")
+    let pass=utilFunction(output,num.expected)
+    console.log(`Task :${index+1}`,pass)
     console.log("Input :",num.input)
     console.log("Expected :",num.expected)
     console.log("Got :",output)
