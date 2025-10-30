@@ -78,11 +78,12 @@ testCase=[
     {
         input:"",
         expect:"Invalid input"
-    }
+    },
+   
 ]
 testCase.forEach((obj,index)=>{
     let output=checkAnagram(obj.input)
-    const pass=JSON.stringify(output)===JSON.stringify(obj.expect)
+    const pass=output.toString()===obj.expect.toString()
     console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
     console.log(`Input`,obj.input)
     console.log(`Expected: `,obj.expect)

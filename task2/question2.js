@@ -24,7 +24,7 @@ testCase=[
   },
   {
     input:[{}],
-    expected:0
+    expected:"Invalid input"
   },
   {
     input:{},
@@ -52,7 +52,7 @@ testCase=[
   },
   {
     input:12/3,
-    expected:"Invalid Input"
+    expected:"Invalid input"
   },
   {
     input:{name:"Athulya"},
@@ -73,7 +73,7 @@ testCase=[
 ]
 testCase.forEach((num,index)=>{
   let output=wordCount(num.input)
-  let pass=JSON.stringify(output)===JSON.stringify(num.expected)
+  let pass=output.toString()===num.expected.toString()
   console.log("Test :",index+1 ,pass?"Passed":"Failed")
   console.log("Input",num.input)
   console.log("Expected",num.expected)

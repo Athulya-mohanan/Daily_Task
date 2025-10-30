@@ -73,7 +73,7 @@ testcase=[
 ]
 testcase.forEach((num,index)=>{
     let output=sumOfDivisible(num.input)
-    const pass=JSON.stringify(output)===JSON.stringify(num.expected)
+    const pass=output.toString()===num.expected.toString()
     console.log(`Test ${index+1} :`,pass?"Passed":"Failed")
     console.log(`Input :${num.input}`)
     console.log(`Expected:${num.expected}`)

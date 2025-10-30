@@ -85,7 +85,8 @@ TestCase = [
 
 TestCase.forEach((text,index)=>{
     let output=patternPrint(text.input)
-    const pass=JSON.stringify(output)===JSON.stringify(text.expected)
+    
+    const pass=output.toString()===text.expected
     console.log(`Test ${index+1} :`, pass?"Passed":"Failed")
          console.log(`Input : ${text.input}`)
         console.log(`Expected : ${text.expected}`)

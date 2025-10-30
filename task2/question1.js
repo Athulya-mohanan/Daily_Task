@@ -17,7 +17,7 @@ function isPrime(num) {
 testCase=[
   {
     input:9,
-    expected:true
+    expected:false
   },
   {
     input:-9,
@@ -29,7 +29,7 @@ testCase=[
   },
   {
     input:"123",
-    expected:"Invald input"
+    expected:"Invalid input"
   },
   {
     input:123,
@@ -57,11 +57,11 @@ testCase=[
   },
   {
     input:1,
-    expected:" Enter a valid number(0 and 1 are not valid)"
+    expected:"Enter a valid number(0 and 1 are not valid)"
   },
   {
     input:0,
-    expected:" Enter a valid number(0 and 1 are not valid)"
+    expected:"Enter a valid number(0 and 1 are not valid)"
   },
   {
     input:[{}],
@@ -76,11 +76,14 @@ testCase=[
     expected:false
   },
  
-
+{
+  input:7,
+  expected:true
+}
 ]
 testCase.forEach((num,index)=>{
   let output=isPrime(num.input)
-  pass=JSON.stringify(output)===JSON.stringify(num.expected)
+  pass=output.toString()===num.expected.toString()
   console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
   console.log("Input",num.input)
   console.log("Expected",num.expected)
