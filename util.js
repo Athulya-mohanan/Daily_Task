@@ -17,3 +17,4 @@ export function utilFunction(program,testcase){
     return result
 }
 
+// console.log(utilFunction([ [ 2, 7 ], [ 9, 1 ], [ 0, 5 ] ],[ [ 2, 7 ], [ 9, 1 ], [ 0, 5 ] ]))

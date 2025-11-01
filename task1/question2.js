@@ -26,7 +26,7 @@ TestCase = [
     expected: "CCACATATT",
   },
   {
-    input: "CAD",
+    input: "C A D",
     expected: "CCACADADD",
   },
   {
@@ -54,8 +54,8 @@ TestCase = [
     expected:"112123233"
   },
   {
-    input:"1$%",
-    expected:"11$1$%$%%"
+    input:4/5,
+    expected:"Invalid input"
   },
   {
     input:"H",

@@ -10,9 +10,11 @@
 // Strong → at least 8 chars, includes upper, lower, number, and special character
 
 function passwordStrengthCheceker(pass) {
+  if(typeof(pass)!=="string" || Array.isArray(pass)) return "Invalid input"
+  
   let splitedpass = pass.split("");
   let passlength = splitedpass.length;
-  let result;
+  let result="try again";
   let special = ["!", "@", "#", "$", "%", "^", "&", "*"];
   let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -39,11 +41,85 @@ function passwordStrengthCheceker(pass) {
         if (pass.includes(i) || pass.includes(j)) {
         result = "Medium";
       }
+      
       }
       
     }
   }
   return result;
 }
-console.log(passwordStrengthCheceker("12dd"));
+// console.log(passwordStrengthCheceker("12dd"));
+let testCase=[
+  {
+    input:"12dd",
+    expected:"Weak"
+  },
+  {
+    input:"ddddddd",
+    expected:"try again"
+  },
+  {
+    input:"12ddddddd",
+    expected:"Medium"
+  },
+  {
+    input:"@12jjjjjA",
+    expected:"strong"
+  },
+  {
+    input:"d   d",
+    expected:"try again"
+  },
+  {
+    input:"@123",
+    expected:"Weak"
+  },
+  {
+    input:123,
+    expected:"Invalid input"
+  },
+  {
+    input:["hello"],
+    expected:"Invalid input"
+  },
+  {
+    input:"123",
+    expected:"Weak"
+  },
+  {
+    input:"@12345",
+    expected:"Medium"
+  },
+  {
+    input:"@12345678890",
+    expected:"Medium"
+  },
+  {
+    input:"@12345678i",
+    expected:"Medium"
+  },
+  {
+    input:"@123456789I",
+    expected:"Medium"
+  },
+  {
+    input:"@123456789Ia",
+    expected:"strong"
+  },
+  {
+    input:{},
+    expected:"Invalid input"
+  }
 
+  
+]
+
+testCase.forEach((item,num)=>{
+    const output=passwordStrengthCheceker(item.input)
+    const pass=output.toString() ===item.expected.toString()
+    console.log(`Test ${num+1} :`, pass?"Passed":"Failed")
+         console.log(`Input : ${item.input}`)
+        console.log(`Expected : ${item.expected}`)
+        console.log(`Got :${output}`)
+    console.log("--------------------------")
+})
