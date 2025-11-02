@@ -1,9 +1,10 @@
+import { objectComparison } from "../utilobj.js";
 
-const students=[
-    {name:"Alice",mark:42},
-    {name:"Bob",mark:67},
-    {name:"Charlie",mark:35}
-]
+// const students=[
+//     {name:"Alice",mark:42},
+//     {name:"Bob",mark:67},
+//     {name:"Charlie",mark:35}
+// ]
 
 function copyStudent(obj){
      if(!Array.isArray(obj)|| obj.length===0) return "Invalid input"
@@ -21,7 +22,7 @@ return studentCopy
 }
 // console.log(copyStudent(students))
 
-testCase=[
+let testCase=[
     {
         input:[{name:"Alice",mark:42},
             {name:"Bob",mark:67},
@@ -30,14 +31,25 @@ testCase=[
         expect:[
                 { name: 'Alice', status: 'Fail' },
                 { name: 'Bob', status: 'pass' },
-            { name: 'Charlie', status: 'Fail' }
+                { name: 'Charlie', status: 'Fail' }
+            ],        
+    },
+     {
+        input:[{name:"Alice",marks:42},
+            {name:"Bob",marks:67},
+            {name:"Charlie",marks:35}
+        ],
+        expect:[
+                { name: 'Alice', status: 'Fail' },
+                { name: 'Bob', status: 'pass' },
+                { name: 'Charlie', status: 'Fail' }
             ],        
     },
     
 ]
 testCase.forEach((obj,index)=>{
     let output=copyStudent(obj.input)
-    const pass=JSON.stringify(output)===JSON.stringify(obj.expect)
+    const pass=objectComparison(output,obj.expected)
     console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
     console.log(`Input`,obj.input)
     console.log(`Expected: `,obj.expect)

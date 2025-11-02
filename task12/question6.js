@@ -10,6 +10,10 @@
 // that means: numbers that keep increasing, without reordering.
 
 function longestIncreasinSequence(arr){
+    if(!Array.isArray(arr)|| arr.length===0) return "Invalid input"
+    for(let i of arr){
+        if(typeof(i)!=="number" || Array.isArray(i)) return "Invalid input"
+    }
     //1) start by sorting each number as a single sequence
     let sequence=[[arr[0]]]
 
@@ -45,6 +49,83 @@ function longestIncreasinSequence(arr){
     }
     return unique
 }
+let testCase=[
+    {
+        input:[10, 20, 15, 30, 22, 40],
+        expected:[
+  [ 10, 20, 30, 40 ],
+  [ 10, 15, 30, 40 ],
+  [ 10, 20, 22, 40 ],
+  [ 10, 15, 22, 40 ]
+]
+    },
+    {
+        input:{},
+        expected:"Invalid input"
+    },
+    {
+        input:"Hello",
+        expected:"Invalid input"
+    },
+    {
+        input:[],
+        expected:"Invalid input"
+    },
+    {
+        input:null,
+        expected:"Invalid input"
+    },
+    {
+        input:NaN,
+        expected:"Invalid input"
+    },
+    {
+        input:undefined,
+        expected:"Invalid input"
+    },
+    {
+        input:["hello","there"],
+        expected:"Invalid input"
+    },
+    {
+        input:[1,2,[4,6]],
+        expected:"Invalid input"
+    },
+    {
+        input:[{}],
+        expected:"Invalid input"
+    },
+    {
+        input:[null,undefined],
+        expected:"Invalid input"
+    },
+    {
+        input:"",
+        expected:"Invalid input"
+    },
+    {
+        input:12,
+        expected:"Invalid input"
+    },
+    {
+        input:[12],
+        expected:[12]
+    },
+    {
+        input:[""],
+        expected:"Invalid input"
+    }
 
-console.log(longestIncreasinSequence([10, 20, 15, 30, 22, 40]))
-console.log(longestIncreasinSequence([6, 9, 2, 0, 5, 7, 8, 2, 8]))
+]
+
+testCase.forEach((num,index)=>{
+        let output=longestIncreasinSequence(num.input)
+       let pass=output.toString()===num.expected.toString()
+        console.log(`Test: ${index+1}`,pass?"Pass":"Fail")
+        console.log("Input :",num.input)
+        console.log("Expected :",num.expected)
+        console.log("Got :",output)
+        console.log("---------------------------------")
+})
+// console.log(longestIncreasinSequence([-1,2,-5,9,10]))
+// console.log(longestIncreasinSequence([6, 9, 2, 0, 5, 7, 8, 2, 8]))

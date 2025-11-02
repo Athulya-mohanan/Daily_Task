@@ -52,7 +52,7 @@ let testCase=[
     },
     {
         input:101,
-        expected:""
+        expected:"one hundred and one"
     },
     {
         input:null,

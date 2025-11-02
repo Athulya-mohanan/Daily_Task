@@ -83,7 +83,7 @@ testCase.forEach((num,index)=>{
        let pass=utilFunction(output,num.expected)
         console.log(`Test: ${index+1}`,pass)
         console.log("Input :",num.input)
-        console.log("Expected :",num.expected)
+        console.log("Expected :",num.expected)v
         console.log("Got :",output)
         console.log("---------------------------------")
 })
