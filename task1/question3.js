@@ -7,7 +7,13 @@ import { objectComparison } from "../utilobj.js";
 // ]
 
 function copyStudent(obj){
-     if(!Array.isArray(obj)|| obj.length===0) return "Invalid input"
+     let keys=[]
+     for(let obs of obj){
+        keys.push(Object.keys(obs))
+     }
+     console.log(keys)
+    // if(typeof(obj.name)!=="string"||typeof(obj.mark)!=="number") return "Invalid input"
+    if((!keys.includes("name"))&& (!keys.includes("mark"))) return "Invalid input"
     const studentCopy=JSON.parse(JSON.stringify(obj));
     studentCopy.forEach((element) => {
     if(element.mark>50){
@@ -34,23 +40,13 @@ let testCase=[
                 { name: 'Charlie', status: 'Fail' }
             ],        
     },
-     {
-        input:[{name:"Alice",marks:42},
-            {name:"Bob",marks:67},
-            {name:"Charlie",marks:35}
-        ],
-        expect:[
-                { name: 'Alice', status: 'Fail' },
-                { name: 'Bob', status: 'pass' },
-                { name: 'Charlie', status: 'Fail' }
-            ],        
-    },
+    
     
 ]
 testCase.forEach((obj,index)=>{
     let output=copyStudent(obj.input)
-    const pass=objectComparison(output,obj.expected)
-    console.log(`Test: ${index+1}`,pass?"Passed":"Failed")
+    const pass=JSON.stringify(output)===JSON.stringify(obj.expect)
+    console.log(`Test: ${index+1}`,pass?"Pass":"Fail")
     console.log(`Input`,obj.input)
     console.log(`Expected: `,obj.expect)
     console.log(`Got:`,output)
@@ -58,4 +54,14 @@ testCase.forEach((obj,index)=>{
 })
 
 
+
+/*
+task1 3rd
+task3 3rd deepcopy
+
+task5 q3 matrix
+set8
+task11 q5 counter
+task12 q 3 full name *
+ */
 

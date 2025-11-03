@@ -12,6 +12,8 @@
 // console.log(emailValidation("invalid.email.com"))
 
 function isValidEmail(email){
+    if(Array.isArray(email)|| email.length===0 || typeof(email)!=="string") return "Invalid input"
+    if(email.replaceAll(/\s/g,"").length===0) return "Invalid input"
    const indexAt=email.indexOf("@")
    if(indexAt===-1|| indexAt!==email.lastIndexOf("@")) return false
 
@@ -33,6 +35,77 @@ function isValidEmail(email){
     return true;
 
 }
-console.log(isValidEmail("athuly@aa175@gmail.com"))
-console.log(isValidEmail("athulyaa@gmail.com"))
-console.log(isValidEmail("@atthy@gmailco.m"))
+// console.log(isValidEmail("athuly@aa175@gmail.com"))
+// console.log(isValidEmail("athulyaa@gmail.com"))
+// console.log(isValidEmail("@atthy@gmailco.m"))
+
+let testCase=[
+    {
+        input:'athuly@aa175@gmail.com',
+        expected:false
+    },
+    {
+        input:"athulyaa@gmail.com",
+        expected:true
+    },
+    {
+        input:"@atthy@gmailco.m",
+        expected:false
+    },
+    {
+        input:["hello"],
+        expected:"Invalid input"
+    },
+    {
+        input:"",
+        expected:"Invalid input"
+    },
+    {
+        input:" ",
+        expected:"Invalid input"
+    },
+    {
+       input:123,
+       expected:"Invalid input"
+    },
+    {
+        input:"user 175@gmail.com",
+        expected:false
+    },
+    {
+        input:"user..@gmail.com",
+        expected:false
+    },
+    {
+        input:"user.a@vonue.com",
+        expected:true
+    },
+    {
+        input:"doe..@gmail.com",
+        expected:false
+    },
+    {
+        input:"1234@gmail.com",
+        expected:true
+    },
+    {
+        input:"user@example",
+        expected:false,
+    },{
+        input:'user.exmaple.com',
+        expected:false
+    },
+    {
+        input:"user@175gamil@.com",
+        expected:false
+    }
+]
+testCase.forEach((num,index)=>{
+        let output=isValidEmail(num.input)
+       let pass=output.toString()===num.expected.toString()
+        console.log(`Test: ${index+1}`,pass?"Pass":"Fail")
+        console.log("Input :",num.input)
+        console.log("Expected :",num.expected)
+        console.log("Got :",output)
+        console.log("---------------------------------")
+})
