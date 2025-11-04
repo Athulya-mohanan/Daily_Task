@@ -13,7 +13,9 @@ function copyStudent(obj){
      }
      console.log(keys)
     // if(typeof(obj.name)!=="string"||typeof(obj.mark)!=="number") return "Invalid input"
-    if((!keys.includes("name"))&& (!keys.includes("mark"))) return "Invalid input"
+    // if((!keys.includes-------")
+filtestCase.forEach((num,index)=>{
+    let output=myFilter(num.i("name"))&& (!keys.includes("mark"))) return "Invalid input"
     const studentCopy=JSON.parse(JSON.stringify(obj));
     studentCopy.forEach((element) => {
     if(element.mark>50){
