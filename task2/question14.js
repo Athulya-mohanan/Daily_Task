@@ -1,3 +1,8 @@
+/**14. Write a program that checks if a given string is a palindrome, ignoring spaces and punctuation.
+
+Test cases:
+Input: "A man, a plan, a canal, Panama!"
+Expected output: True */
 function stringPalindrome(str){
     if(typeof(str)!=="string" ) return "Invalid input"
     let updatedText=str.replace(/[,.!?\s]/g, '').toLowerCase()

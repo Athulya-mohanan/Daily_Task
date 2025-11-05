@@ -1,3 +1,8 @@
+/**7. Write a Function that Converts RGB to Hex Color Code.
+
+Test cases:
+Input: [255, 165, 0]
+Output: "#FFA500" */
 function getHexaColor(color){
     if(!Array.isArray(color) || color.length===0 || color.length!==3) return "Invalid input"
   for(let clr of color){

@@ -1,3 +1,4 @@
+/** Create a Promise that rejects after 1 second with the error "Network error". Handle it with .catch() to log the error message. */
 let new_promise =new Promise((resolve,reject)=>{
     let networkError=true
     setTimeout(()=>{

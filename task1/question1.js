@@ -1,7 +1,8 @@
+/*Without using built-in methods like .map(), .filter(), or .reduce(), implement your own versions:
+myMap(array, callback)
+myFilter(array, callback)
+myReduce(array, callback, initialValue) */
 import { utilFunction } from "../util.js";
-
-
-
 function myMap(arr,callback){
      if(!Array.isArray(arr)) return "Invalid input"
     if(arr.length===0) return "Array must contain atleast one value"

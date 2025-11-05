@@ -1,3 +1,8 @@
+/**2. Get All Permutations of a String. A permutation of a string is a rearrangement of its characters in all possible ways, where every character is used exactly once in each arrangement.
+
+Test cases:
+Input: "abc"
+Output: ["abc", "acb", "bac", "bca", "cab", "cba"] */
 import { utilFunction } from "../util.js"
 
 function findPermutations(str1){

@@ -29,7 +29,18 @@
 // }
 // patternPrinting(9);
 
+/**4. String Pattern Challenge
 
+Description:
+Write a program that prints this pattern for n = 5
+
+A
+B B
+C C C
+D D D D
+E E E E E
+
+(You must derive characters using ASCII values, not hardcoded letters.) */
 
 function patternPrinting(n) {
   if(n<=0|| typeof(n)!=="number" || Math.round(n)!==n) return "Invalid input"

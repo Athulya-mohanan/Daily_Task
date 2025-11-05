@@ -1,3 +1,5 @@
+/**Write a program that checks if a given number is prime. */
+
 function isPrime(num) {
   let result;
   if(num<0 || typeof(num)!=="number" || Math.round(num)!==num) return "Invalid input"

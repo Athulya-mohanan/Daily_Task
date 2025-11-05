@@ -1,3 +1,9 @@
+/**8. Write a program that finds the maximum product of three numbers in a given list of integers.
+
+Test cases:
+Input: [1, 2, 3, 4]
+Expected output: 24 (2 _ 3 _ 4)
+ */
 function maxProducts(lst1){
     if(!Array.isArray(lst1)||lst1.length<3) return "Invalid input"
     let lst=[...lst1]

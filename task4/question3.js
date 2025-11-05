@@ -1,3 +1,8 @@
+/**3. Invert Keys and Values in an Object
+
+Test cases:
+Input: { a: 1, b: 2 }
+Output: { 1: "a", 2: "b" } */
 function objectInvert(obj){
     let newobj=Object.entries(obj)
    for(let i=0;i<newobj.length;i++){

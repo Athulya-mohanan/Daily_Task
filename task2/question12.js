@@ -1,3 +1,8 @@
+/**12. Write a program that finds the maximum product of three numbers in a given list of integers.
+
+Test cases:
+Input: [1, 2, 3, 4]
+Expected output: 24 (2 _ 3 _ 4) */
 import { utilFunction } from "../util.js"
 function maxProduct(arr){
   

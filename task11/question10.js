@@ -1,3 +1,10 @@
+/**. Write a program longestCommonPrefix(strings) that takes a list of strings and returns the 
+longest common prefix among them. Your function must be case-sensitive. 
+Test cases: 
+Input: ["flower", "flow", "flight"] 
+Output: "fl" 
+Input: ["dog", "racecar", "car"] 
+Output: "" (an empty string, as there is no common prefix) */
 import { utilFunction } from "../util.js"
 
 function largestPrefix(arr){

@@ -1,3 +1,5 @@
+/**. Write a function numberToText(num) that takes an integer and returns its full English text 
+representation. */
 function numberToText(num){
         if(typeof(num)!=="number" || num<0 || Math.round(num)!==num) return "Invalid input"
     if(num===0) return "Zero"

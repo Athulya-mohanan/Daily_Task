@@ -1,3 +1,11 @@
+/**2.   Write a program that takes a word and prints a pattern like this:
+Input: CAT
+Output:
+C
+CA
+CAT
+AT
+T */
 function patternPrint(aword) {
       if (typeof (aword )!="string" || aword.trim()==="") return "Invalid input";
   let word = aword.replaceAll(/[\s,-]/g, "");

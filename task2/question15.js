@@ -1,3 +1,8 @@
+/**15. Write a program that takes a string as input and returns the reverse of each word in the string while preserving the word order.
+
+Test cases:
+Input: "Hello world"
+Expected output: "olleH dlrow" */
 function stringReverse(str){
     if(typeof(str)!=="string" || Array.isArray(str)) return "Input must be a string"
     let reversed=[]

@@ -1,3 +1,8 @@
+/**6. Write a function which returns textual representation of a number.
+
+Test cases:
+Input: 723
+Expected output: 'Seven hundred and twenty three' */
 function numbersToWords(num){
     if(typeof(num)!=="number" || num<0 || Math.round(num)!==num) return "Invalid input"
   

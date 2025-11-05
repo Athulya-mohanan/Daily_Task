@@ -1,3 +1,8 @@
+/**7. Write a function to convert text from camelCase to snake_case.
+
+Test cases:
+Input: 'myFunction'
+Expected output: 'my_function' */
 import { utilFunction } from "../util.js"
 
 function snakeCase(word){

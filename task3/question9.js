@@ -1,3 +1,9 @@
+
+/**9. Write a function to remove duplicate characters from the given string.
+
+Test cases:
+Input: 'apple'
+Expected output: 'aple' */
 import { utilFunction } from "../util.js"
 
 function removeDuplications(str1){

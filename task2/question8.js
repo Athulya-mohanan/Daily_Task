@@ -1,3 +1,8 @@
+/**Write a program that finds the missing number in an array containing consecutive integers from 1 to n, with one number missing.
+
+Test cases:
+Input: [1, 2, 3, 5, 6]
+Expected output: 4 */
 import { utilFunction } from "../util.js"
 function missingNumber(arr){
     // console.log(typeof(arr))

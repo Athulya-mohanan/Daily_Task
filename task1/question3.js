@@ -1,3 +1,19 @@
+
+/**3.  Given:
+const students = [
+  { name: "Alice", marks: 42 },
+  { name: "Bob", marks: 67 },
+  { name: "Charlie", marks: 35 },
+];
+Create a new array:
+[
+  { name: "Alice", status: "Fail" },
+  { name: "Bob", status: "Pass" },
+  { name: "Charlie", status: "Fail" },
+] */
+
+
+  
 import { objectComparison } from "../utilobj.js";
 
 // const students=[

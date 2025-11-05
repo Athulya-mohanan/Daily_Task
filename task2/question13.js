@@ -1,3 +1,8 @@
+/**13. Write a program that takes a list of strings as input and returns the longest word among them.
+
+Test cases:
+Input: ["cat", "dog", "elephant", "tiger"]
+Expected output: "elephant" */
 import { utilFunction } from "../util.js"
 function largestWord(arr){
     if(!Array.isArray(arr)) return "Invalid input"

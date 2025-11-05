@@ -1,3 +1,11 @@
+/**2. Word Frequency Counter
+
+Description:
+Given a paragraph string, return an object showing the number of times each word appears (ignore case and punctuation).
+
+Example:
+Input → "Hello hello world, world!"
+Output → { hello: 2, world: 2 } */
 import { objectComparison } from "../utilobj.js"
 
 function wordFrequency(word){

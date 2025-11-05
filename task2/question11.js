@@ -1,3 +1,8 @@
+/**11. Write a program that determines if a given number is a perfect square. A perfect square is an integer that is equal to the square of another integer.
+
+Test cases:
+Input: 16
+Expected output: True */
 function perfectSquare(num){
     if(typeof(num)!=="number"|| num<0) return "invalid input"
     let result

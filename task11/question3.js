@@ -1,3 +1,13 @@
+/**Without using the built-in .map(), .filter(), or .reduce() methods, implement your own versions 
+that work just like the originals. 
+●  myMap(array, callback): Returns a new array with the results of calling the callback on 
+every item. 
+●  myFilter(array, callback): Returns a new array with only the items for which the callback 
+returns true. 
+●  myReduce(array, callback, initialValue): Executes the callback for each item, passing the 
+"accumulator" and the current item. The initialValue is the starting value for the 
+accumulator. Handle the case where initialValue is not provided (in which case, the first 
+item in the array becomes the initial value). */
 import { utilFunction } from "../util.js"
 
 //Filter

@@ -1,3 +1,6 @@
+/** Write a function countdown(targetDate) that logs remaining days, hours, minutes, and 
+seconds every second. When the countdown reaches zero it should log a final message like 
+"Countdown Finished!" */
 function daysCountDown(target){
     let trgt= new Date(target).getTime()
     const timer=setInterval(()=>{

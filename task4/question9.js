@@ -1,3 +1,8 @@
+ /**9. Write a program that determines if a string is an anagram of another string. An anagram is a word or phrase formed by rearranging the letters of another word or phrase.
+
+Test cases:
+Input: "listen", "silent"
+Expected output: True */
  function wordSort(wrd){
     return wrd.toLowerCase().replace(/\s/g,"").split("").sort()
 }

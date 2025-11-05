@@ -1,3 +1,8 @@
+/**1. Write a function to flatten an array of arbitrarily nested arrays into a flat array.
+
+Test cases:
+Input: [1, [2, [3, [4]], 5]]
+Output: [1, 2, 3, 4, 5] */
 import { utilFunction } from "../util.js"
 
 function flatArray(arr){

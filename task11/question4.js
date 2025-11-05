@@ -1,3 +1,9 @@
+/** Given an array of strings, words, write a function groupAnagrams(words) that groups words 
+that are anagrams of each other. Return the group sorted by size, from largest group to 
+smallest. 
+Test cases: 
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"] 
+Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]] */
 function checkAnagram(arr){
       if(!Array.isArray(arr)) return "Invalid input"
     if(arr.length===0) return "Array must contain atleast one value"

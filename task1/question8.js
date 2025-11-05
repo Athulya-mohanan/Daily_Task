@@ -1,3 +1,13 @@
+/**Given an array of words:
+["care", "race", "acre", "dog", "god", "cat"]
+Group words that are anagrams together.
+ Output:
+[
+  ["care", "race", "acre"],
+  ["dog", "god"],
+  ["cat"]
+]
+Implement efficiently without using external libraries. */
 function checkAnagram(arr){
       if(!Array.isArray(arr)) return "Invalid input"
     if(arr.length===0) return "Array must contain atleast one value"

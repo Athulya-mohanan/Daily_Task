@@ -1,3 +1,4 @@
+/**2. Write a program to find whether a given number is an Armstrong number ( An Armstrong number is the sum of its own digits, each raised to the power of the number of digits) */
 import { utilFunction } from "../util.js"
 
 function armstrongNumber(num){

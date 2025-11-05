@@ -1,3 +1,8 @@
+/**2. Write a program that takes a sentence as input and returns the word count.
+
+Test cases:
+Input: "Hello world"
+Expected output: 2 */
 function wordCount(word) {
   if(typeof(word)!=="string") return "Invalid input"
   let splitedword = word.split(" ");

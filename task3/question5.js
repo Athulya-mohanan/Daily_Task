@@ -1,3 +1,8 @@
+/**5. Write a function which receives 'n' number of number arguments, and it should return their sum. (Note: Arguments can be in any count).
+
+Test cases:
+Input: 1, 2, 3, 4
+Expected output: 10 */
 import { utilFunction } from "../util.js"
 
 function sumOfArguments(...a){

@@ -1,3 +1,4 @@
+/**. Create three function which returns a Promise. All functions need to be called in parallel. */
 function function1(){
     return new Promise((success)=>{
          success("success from function-1") 

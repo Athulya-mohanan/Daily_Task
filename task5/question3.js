@@ -1,3 +1,11 @@
+/**3.Write a program to convert a given matrix into its transpose.
+
+Test cases:
+Input: [ [2, 9, 0], 
+         [7, 1, 5] ]
+Output: [ [2, 7], 
+          [9, 1],
+          [0, 5] ] */
 import { utilFunction } from "../util.js"
 
 function trnsposeMatrix(mrtx){

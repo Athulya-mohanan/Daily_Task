@@ -1,3 +1,8 @@
+/**7. Write a program that takes a sentence as input and returns the longest word in the sentence.
+
+Test cases:
+Input: "Hello world of programming"
+Expected output: "programming" */
 import { utilFunction } from "../util.js"
 function longestWord(arr){
      if(Array.isArray(arr)|| typeof(arr)!=="string"|| arr.trim().length===0) return "Invalid input"

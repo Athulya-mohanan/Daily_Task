@@ -1,3 +1,8 @@
+/**5. Custom Filter Function
+
+Description:
+Implement your own version of JavaScript's Array.filter() function called myFilter() that works exactly the same.
+Then test it with a condition like "keep only numbers > 10". */
 import { utilFunction } from "../util.js"
 
 function myFilter(arr,callback){

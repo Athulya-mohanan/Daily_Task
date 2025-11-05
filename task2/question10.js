@@ -1,3 +1,8 @@
+/**10. Write a program that takes a list of strings as input and returns the longest common prefix among the strings.
+
+Test cases:
+Input: ["flower", "flow", "flight"]
+Expected output: "fl" */
 import { utilFunction } from "../util.js"
 function longestCommonPrefix(arr) {
         if(!Array.isArray(arr) || arr.length===0)   return "Invalid input"

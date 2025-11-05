@@ -1,3 +1,4 @@
+/** */
 // function emailValidation(email){
 //     let extn=email.slice(-4)
 //     if(extn===".com" && email.includes("@")){

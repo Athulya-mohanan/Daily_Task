@@ -1,3 +1,11 @@
+/**7. Flatten Nested Arrays
+
+Description:
+Without using .flat(), write a recursive function to flatten an array of arbitrary depth.
+
+Example:
+Input → [1, [2, [3, [4]], 5]]
+Output → [1, 2, 3, 4, 5] */
 import { utilFunction } from "../util.js"
 
 function flatArray(arr){

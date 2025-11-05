@@ -1,3 +1,8 @@
+/**6. Write a program that takes a list of strings as input and returns the list sorted based on the length of the strings, with shorter strings appearing first. If two strings have the same length, maintain their relative order.
+
+Test cases:
+Input: ["open", "source", "programming", "is", "fun"]
+Expected output: ["is", "fun", "open", "source", "programming"] */
 import { utilFunction } from "../util.js"
 function arrayLengthSort(arr){
     if(!Array.isArray(arr)) return "Invalid input"

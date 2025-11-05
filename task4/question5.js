@@ -1,3 +1,8 @@
+/**5. Write a function to convert text from camelCase to kebab-case.
+
+Test cases:
+Input: 'myFunction'
+Expected output: 'my-function' */
 function kebabcase(word){
     if(typeof(word)!=="string" || Array.isArray(word)) return "Invalid input"
     if(word.replaceAll(/\s/g,"").length===0) return "Invalid input"

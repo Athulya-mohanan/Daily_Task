@@ -1,3 +1,8 @@
+/**Write a program that takes a string as input and returns the frequency of each character in the string.
+
+Test cases:
+Input: "hello"
+Expected output: {'h': 1, 'e': 1, 'l': 2, 'o': 1} */
 function characterFrequency(words){
     if(Array.isArray(words) || typeof(words)!=="string") return "Invalid input"
     let frequenCount={}

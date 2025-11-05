@@ -1,3 +1,8 @@
+/**1. Write a program that should interpret each array item as a number, and return the sum.
+
+Test cases:
+Input: [[1,2,3], [0, 7]]
+Expected output: 130 // 123 + 7 = 130 */
 import { utilFunction } from "../util.js";
 function sumofArray(arr) {
   if (!Array.isArray(arr)) return "Invalid input";

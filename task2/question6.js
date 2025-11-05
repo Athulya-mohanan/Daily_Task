@@ -1,3 +1,8 @@
+/**. Write a program that takes a list of integers as input and returns the sum of all the numbers divisible by 3.
+
+Test cases:
+Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Expected output: 18 (3 + 6 + 9) */
 import { utilFunction } from "../util.js"
 function sumOfDivisible(arr){
       if(!Array.isArray(arr)) return "Invalid input"
