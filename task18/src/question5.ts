@@ -1,25 +1,28 @@
-function SortBySum(arr: number[]) {
-  let sum: number[] = [];
-  let result: number[] = [];
-  if (!Array.isArray(arr) || arr.length === 0) return "Invalid input";
-  for (let subarr of arr) {
-    if (!Array.isArray(subarr) || subarr.length === 0) return "Invalid input";
-
-    for (let i = 0; i < subarr.length; i++) {
-      if (typeof subarr[i] !== "number") return "Invalid input";
+function SortBySum(arr:number[][]):number[][]|string {
+  let sum :number[]= [];
+  let result:number[][] = [];
+  if(!Array.isArray(arr)|| arr.length===0) return "Invalid input"
+for (let subarr of arr) {
+    if(!Array.isArray(subarr)|| subarr.length===0) return "Invalid input"
+  
+    for(let i=0;i<subarr.length;i++){
+        if(typeof(subarr[i])!=="number") return "Invalid input"
     }
-  }
+}
   for (let subarr of arr) {
-    let sums:number = subarr.reduce((curr: number, acc: number) => curr + acc);
+    let sums = subarr.reduce((curr, acc) => curr + acc);
     sum.push(sums);
   }
   let sumforsort = [...sum];
   let sortedarr = sumforsort.sort((a, b) => b - a);
+  let usedIndex:number[]=[]
   for (let sort of sortedarr) {
-    for (let index of sum) {
-      if (sort === index) {
-        result.push(arr[sum.indexOf(index)]);
-      }
+    for (let i=0;i<sum.length;i++) {
+      if (sort === sum[i] && !usedIndex.includes(i)){
+        result.push(arr[i]!)
+        usedIndex.push(i)
+        break;
+      } 
     }
   }
   return result;
@@ -89,8 +92,8 @@ let testCase = [
     expected: [[3], [2], [1]],
   },
   {
-    input: [[]],
-    expected: "Invalid input",
+    input:[[2,1],[0],[3,1],[3],[4]] ,
+    expected:[[3,1],[4],[2,1],[3],[0]],
   },
 ];
 
