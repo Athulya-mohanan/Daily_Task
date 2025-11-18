@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .tooltip{
+        position: relative;
+        list-style: none;
+     }
+     .text{
+        width: 100px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+     }
+     .fulltext{
+        position: absolute;
+        visibility: hidden;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+     }
+     .tooltip:hover .fulltext{
+        visibility: visible;
+     }
+</style>
+<body>
+    <div class="container">
+        <ul>
+            <li class="tooltip"><p class="text">I'm a hidden text, i will only show when you hover on me!</p><span class="fulltext">I'm a hidden text, i will only show when you hover on me!</span></li>
+        </ul>
+    </div>
+</body>
+</html>
