@@ -1,0 +1,27 @@
+<!-- 1. Develop a UI with showing user posts,
+  fetched from this api endpoint: https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10. 
+  This endpoint returns only ten items. When the user scrolls the page and reached the bottom, re-fetch next 10 items (by updating page in query param) and show it. 
+  Show loader indicating data fetching. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    #load{
+        visibility: hidden;
+        color: red;
+        font-weight: bold;
+    }
+  </style>
+  <body>
+    <div id="container">
+        <ul id="unorder"></ul>
+        <p id="load">Loading....</p>
+    </div>
+    <script src="question1.js"></script>
+  </body>
+  </html>

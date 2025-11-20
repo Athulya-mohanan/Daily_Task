@@ -1,0 +1,54 @@
+<!-- 2. Build a image carousal / slider. 
+ Which should:
+* Auto-slide every 3 seconds
+* Pause on hover
+* Navigation using Next/Prev buttons -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      position: relative;
+    }
+    .img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+    .icn {
+      position: absolute;
+      bottom: 50%;
+    }
+    #prev {
+      left: 0;
+    }
+    #next {
+      right: 0;
+    }
+  </style>
+  <body>
+    <h1>Spirited away</h1>
+    <div id="container">
+      <div>
+        <img src="icons/icons8-prev-50.png" id="prev" class="icn" />
+        <img src="icons/icons8-next-50.png" id="next" class="icn" />
+        <img
+          src="https://w0.peakpx.com/wallpaper/93/518/HD-wallpaper-anime-dragon-chihiro-spirited-away-haku-spirited-away-spirited-away.jpg"
+          class="img"
+          style="display: block"
+        />
+        <img src="https://wallpapercave.com/wp/wp11538898.jpg" class="img" />
+        <img
+          src="https://wallpapercat.com/w/full/1/6/d/138467-3840x2160-desktop-4k-spirited-away-wallpaper-image.jpg"
+          class="img"
+        />
+      </div>
+    </div>
+
+    <script src="question2.js"></script>
+  </body>
+</html>
