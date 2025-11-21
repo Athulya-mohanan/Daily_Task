@@ -1,0 +1,182 @@
+<!-- Create a top navigation bar that contains several menu items. 
+ When the user hovers over any menu item,
+  a floating drop-down panel should appear. 
+  Each drop-down should include sub-items, 
+  and those sub-items should only be visible when the user hovers over the 
+  corresponding drop-down menu. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        margin: 0;
+    }
+    li {
+      list-style: none;
+      display: none;
+      padding: 4px;
+      background-color: rgb(241, 235, 226);
+      cursor: pointer;
+    }
+    li span {
+       display: none;
+    }
+    ul:hover li {
+      display: block;
+    }
+
+    #navbar {
+        padding: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      background-color: rgb(168, 168, 168);
+      height: 50px;
+    
+    }
+    #navbar span{
+        padding:0 30px;
+    }
+    
+    li:hover span {
+       display: block;
+    }
+    li:hover{
+        font-weight: bold;
+        background-color: rgb(248, 228, 197);
+    }
+    span{
+        display: block;
+        color: brown;
+    }
+    ul p{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+    ul{
+        width: 100%;
+    }
+    
+   
+  </style> 
+  <body>
+    <div class="container">
+           <div id="navbar">
+
+        <ul>
+          <p>Icons</p>
+    
+          <li>
+            Icons
+            <span>PNG and SVG icons in 47 diffrent style</span>
+          </li>
+          <li>
+            Mac and windows app
+            <span>Fast nativ app with icons</span>
+          </li>
+          <li>
+            Plugins
+            <span>drag and drop icons to other app</span>
+          </li>
+          <li>
+            Iconizer
+            <span>Edit Svg Icons without tech skills</span>
+          </li>
+       
+        </ul>
+        <ul>
+          <p>Illustrations</p>
+          <li>
+            Ouch!
+            <span>Illustations items from top</span>
+          </li>
+          <li>
+            Mega Creater
+            <span>Cretae Illustations using drag-n-drop</span>
+          </li>
+          <li>
+            Animated Illustration
+            <span>Moving pitcures to liven up your design</span>
+          </li>
+          <li>
+            Illustration Generator
+            <span>Generate series of consistent Illustrations</span>
+          </li>
+          <li>
+            Mac and windows apps
+            <span>Fast native app with icons</span>
+          </li>
+          <li>
+            Plugins
+            <span>drag and drop icons to other app</span>
+          </li>
+        </ul>
+        <ul>
+         <p> AI</p>
+          <li>
+            GenYou
+            <span>Generate photos of same person with hundreds of variations</span>
+          </li>
+
+          <li>
+            Human Generator
+            <span>Most advanced full body human generator</span>
+          </li>
+          <li>
+            Face Generator
+            <span>Generate unique and expressive AI-generated face</span>
+          </li>
+          <li>Illustration Generator
+          <span>Generate series of consistent Illustrations</span>
+          </li>
+          <li>
+            Face Swapper
+            <span>Make production quality face swaps</span>
+          </li>
+
+          <li>
+            Smart Upscaler
+            <span>Use AI to enhance image resolution</span>
+          </li>
+        </ul>
+        <ul>
+        <p>  Photos</p>
+          <li>Moose <span>stock photos</span> 
+
+          </li>
+          <li>
+            Mac and windows apps
+            <span>Fast native app with icons</span>
+          </li>
+          <li>
+            Plugins
+            <span>drag and drop icons to other app</span>
+          </li>
+          <li>
+            Face Swapper
+            <span>Make production quality face swaps</span>
+          </li>
+        </ul>
+        <ul><p>Contact</p>
+            <li><a>Address </a>
+            <span>Lorem ipsum, dolor sit amet consectetur</span></li>
+            <li>Phone
+            <span>+91 87364820923</span></li>
+        </ul>
+        <ul><p>More</p>
+            <li><a>About us</a>
+            <span>Follow for more</span></li>
+        </ul>
+    </div>
+    </div> 
+  
+    <script src="question2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!-- . Create a sidebar that can be opened and closed using a hamburger menu icon, 
+ which should change to a close icon when the sidebar is active. Inside the sidebar,
+  organize content under section titles, and allow each section to expand or collapse like an accordion panel. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+   ul{
+    padding: 4px;
+   }
+    #unorder{
+        display: none;
+        padding: 0;
+    }
+    #hamb{
+        width: 20px;
+    }
+    #cross{
+        display: none;
+        width: 20px;
+    }
+    .subul li{
+        display: none;
+    }
+    
+  </style>
+  <body>
+    <div class="container">
+        <div id="buttons">
+        <img src="icons/icons8-menu-50.png" id="hamb" class="icn">
+        <img src="icons/icons8-cross-50.png" id="cross" class="icn">
+        </div>
+        <div id="unorder">
+            <ul class="subul">Task1 <img src="icons/icons8-down-arrow-24.png" class="downarow">
+                <li class="list">Question-1</li>
+                <li class="list">Question-2</li>
+                <li class="list">Question-3</li>
+            </ul>
+            <ul class="subul">Task2 <img src="icons/icons8-down-arrow-24.png" class="downarow">
+            <li class="list">Question-1</li>
+                <li class="list">Question-2</li>
+                <li class="list">Question-3</li></ul>
+            <ul class="subul">Task3 <img src="icons/icons8-down-arrow-24.png" class="downarow">
+             <li class="list">Question-1</li>
+                <li class="list">Question-2</li>
+                <li class="list">Question-3</li></ul>
+            <ul class="subul">Task4 <img src="icons/icons8-down-arrow-24.png" class="downarow">
+             <li class="list">Question-1</li>
+                <li class="list">Question-2</li>
+                <li class="list">Question-3</li></ul>
+            <ul class="subul">Task5 <img src="icons/icons8-down-arrow-24.png" class="downarow">
+             <li class="list">Question-1</li>
+                <li class="list">Question-2</li>
+                <li class="list">Question-3</li></ul>
+            </div>
+    </div>
+    <script src="question3.js"></script>
+  </body>
+  </html>
