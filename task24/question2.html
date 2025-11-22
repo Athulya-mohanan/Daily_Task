@@ -11,17 +11,27 @@
     <title>Document</title>
   </head>
   <style>
-    .container {
+    #container {
+      width: 100%;
       position: relative;
+      overflow: hidden;  /*hides other images*/
     }
     .img {
-      width: 100%;
-      height: auto;
-      display: none;
+      /* width: 100%; */
+      min-width: 100vw;
+      /* height: auto; */
+      /* display: none; */
+      float: left;
+      object-fit: cover;
     }
+    /* .img.active{
+      opacity: 1;
+    } */
     .icn {
       position: absolute;
       bottom: 50%;
+      z-index: 10;
+      cursor: pointer;
     }
     #prev {
       left: 0;
@@ -29,21 +39,30 @@
     #next {
       right: 0;
     }
+    #sliderTrack{
+      width: 300%;
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
   </style>
   <body>
     <h1>Spirited away</h1>
     <div id="container">
-      <div>
+      
         <img src="icons/icons8-prev-50.png" id="prev" class="icn" />
         <img src="icons/icons8-next-50.png" id="next" class="icn" />
+        <div id="sliderTrack">
         <img
           src="https://w0.peakpx.com/wallpaper/93/518/HD-wallpaper-anime-dragon-chihiro-spirited-away-haku-spirited-away-spirited-away.jpg"
           class="img"
-          style="display: block"
         />
         <img src="https://wallpapercave.com/wp/wp11538898.jpg" class="img" />
         <img
           src="https://wallpapercat.com/w/full/1/6/d/138467-3840x2160-desktop-4k-spirited-away-wallpaper-image.jpg"
+          class="img"
+        />
+         <img
+          src="https://w0.peakpx.com/wallpaper/93/518/HD-wallpaper-anime-dragon-chihiro-spirited-away-haku-spirited-away-spirited-away.jpg"
           class="img"
         />
       </div>

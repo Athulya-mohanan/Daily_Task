@@ -20,13 +20,11 @@ buttons.addEventListener("click",()=>{
 })
 downarow.forEach(arrow=>{
     arrow.addEventListener("click",()=>{
-        let list=document.querySelectorAll(".list")
-        list.forEach(lst=>{
-            if(lst.style.display==="block"){
-                lst.style.display="none"
-            }else{
-                lst.style.display="block"
-            }
-        }) 
-    })
+        const parentUl=arrow.parentElement;
+        const subItems=parentUl.querySelectorAll("li")
+        subItems.forEach(li=>{
+            li.style.display=li.style.display==="block"?"none":"block"
+        })
+        
+  })
 })
