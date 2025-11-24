@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        position:relative;
+    }
+    .icn{
+        position: absolute;
+        right: 0;
+    }
+   
+    .notContainer{
+        margin-top: 60px;
+        float: right;
+        background-color: aliceblue;
+        padding: 24px;
+        display: none;
+        position: relative;
+        animation-name: My_Animation;
+    }
+    .nots{
+        border-bottom: 1px solid  rgb(207, 231, 252);
+        padding: 10px;
+        margin-bottom: 1px;
+    }
+#crossIcon{
+    display: none;
+}
+</style>
+<body>
+    <div class="container">
+        <div id="icons">
+        <img src="/task26/icons/icons8-notification-50.png" id="notIcn" class="icn">
+        <img src="/task25/icons/icons8-cross-50.png" id="crossIcon" class="icn">
+        </div>
+            <div class="notContainer">
+            <div class="nots">Notification -1</div>
+            <div class="nots">Notification -2</div>
+            <div class="nots">Notification -3</div>
+            <div class="nots">Notification -4</div>
+            <div class="nots">Notification -5</div>
+            </div>
+            
+
+        
+    </div>
+    <script src="question1.js"></script>
+</body>
+</html>

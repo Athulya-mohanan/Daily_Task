@@ -1,0 +1,140 @@
+<!-- 2. Design a tab-based navigation system where users can switch between different content pages by clicking on the corresponding tabs. Each page should persist its own state while navigating. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Document</title>
+  </head>
+  <style>
+    .layout{
+       display: flex;
+       align-items: center;
+       justify-content:center;
+    }
+    .container{
+        
+        background-color: aliceblue;
+        width: fit-content;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid rgb(195, 227, 255);
+        border-radius: 10px;
+    }
+    .nav{
+         background-color: rgb(195, 227, 255);
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: larger;
+        white-space: nowrap;
+        
+        
+    }
+    .nav div{
+      transition: background-color 1s ease-out,transform 1s ease-out;
+     
+        margin-left: 10px;
+    }
+    .active{
+       background-color:white;
+       border-bottom: 1px solid rgb(52, 157, 255);
+    }
+    .name{
+        padding: 12px;
+        cursor: pointer;
+       
+        
+    }.pages{
+        padding: 24px;
+        text-align: justify;
+       /* font-size: x-large; */
+       
+        
+    }
+    .text{
+        margin-top: 10px;
+        font-size: 20px;
+        padding: 12px;
+        width: 60%;
+      
+    }
+    .pages img{
+        width: 600px;
+        height: auto;
+    }
+    .page{
+        display: none;
+    }
+    .active_text{
+        display: block;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+        
+    }
+  </style>
+  <body>
+    <div class="layout">
+    <div class="container">
+      <div class="nav">
+        <div class="active name">Weathering with you</div>
+        <div class="name">Josee the tiger and the fish</div>
+        <div class="name">Silent voice</div>
+        <div class="name">Ocean Waves</div>
+      </div>
+       <div class="pages">
+        <div class="active_text page">
+            <img src="https://m.wsj.net/video/20200116/011620weatheringwithyou/011620weatheringwithyou_1920x1080.jpg">
+            <div class="text">
+          Weathering with You is a 2019 animated film about a runaway teenager
+          named Hodaka who meets and befriends Hina, a girl with the
+          supernatural ability to control the weather. They start a business
+          using her powers to bring sunshine to a perpetually rainy Tokyo, but
+          their actions have unforeseen consequences. The story is a romantic
+          fantasy that explores themes of love, sacrifice, and the relationship
+          between humanity and nature
+        </div>
+        </div>
+        <div class="page">
+            <img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfcpxF2-ycaKwj5Wj_7N1RKAvCIrxGL18iwzkq8rH5Zq6jSVivv2IMiUuy8WUb0M3Dlg6qjGQjpZC8-lTLRCwLPvaU0qB3pPCYOD.jpg?r=be1">
+            <div class="text">
+          Tsuneo is a university student, and Josee is a young girl who has
+          rarely gone out of the house by herself due to her being unable to
+          walk. The two meet when Tsuneo finds Josee's grandmother taking her
+          out for a morning walk.
+        </div>
+        </div>
+        <div class="page">
+            <img src="https://filmfascination.com/wp-content/uploads/2022/11/a-silent-voice-jpeg.webp">
+            <div class="text">
+          A Silent Voice is a Japanese animated film about a former bully, Shoya
+          Ishida, who seeks to atone for his past actions by reconnecting with
+          Shoko Nishimiya, a deaf girl he used to bully. After Shoko transfers
+          schools, Shoya becomes an outcast himself and, burdened by guilt and
+          regret, attempts to befriend her as a high schooler to make amends.
+          The story explores themes of bullying, disability, depression,
+          anxiety, suicide, forgiveness, and redemption through their complex
+          relationship
+          </div>
+        </div>
+        <div class="page">
+            <img src="https://wallpapers.com/images/hd/ocean-waves-anime-xivxkwb7ubyzgoxt.jpg">
+            <div class="text">
+          Ocean Waves is a Studio Ghibli coming-of-age story about a love
+          triangle between two high school best friends, Taku and Yutaka, and a
+          moody transfer student from Tokyo named Rikako. Set in the Japanese
+          city of Kochi, the film follows Taku as he reflects on his senior year
+          of high school after encountering Rikako, exploring themes of
+          friendship, first love, and the emotional complexities of growing up.
+          </div>
+        </div>
+      </div> 
+    </div>
+    </div>
+    <script src="question2.js"></script>
+  </body>
+</html>

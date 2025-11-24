@@ -1,0 +1,75 @@
+<!-- 3. Develop a modal window component. The modal must close when the user:
+* Clicks an internal Close Button.
+* Clicks the backdrop (the grayed-out area outside the modal box)
+* Presses the Escape key. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .container{
+        background-color: rgb(248, 241, 241);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal_window{
+        width: fit-content;
+        background-color: white;
+      padding: 30px;
+      border-radius: 5px;
+      border: 1px solid black; 
+      position: relative;
+      box-shadow: 1px 5px 13px black;
+    }
+   .buttons{
+    float: right;
+   
+   }
+   button{
+    padding: 8px;
+    border: 1px solid black;
+    margin-left: 6px;
+    border-radius: 5px;
+   }
+   .buttons button:hover{
+    cursor: pointer;
+    background-color: rgb(99, 113, 119);
+    
+   }
+   .cross{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    padding: 5px;
+   }
+   .cross:hover{
+    background-color: rgb(99, 113, 119);
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="modal_window">
+            <h1>Conformation</h1>
+            <p>Are you sure you want to do this action</p>
+            <div class="buttons">
+                <button id="yes">YES</button>
+                <button id="No">NO</button>
+                <img src="/task25/icons/icons8-cross-50.png" class="cross">
+            </div>
+        </div>
+    </div>
+    <script src="question3.js"></script>
+</body>
+</html>
