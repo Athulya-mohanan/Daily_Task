@@ -4,6 +4,7 @@ window.addEventListener("scroll",()=>{
     const scrolltop=window.scrollY; // gives how many pixel the user has scrolled from the top of the page
     const scrollHeights=document.body.scrollHeight-window.innerHeight // total height of the whole webpage- visible part(screen height)
     const scrollPercentage=(scrolltop/scrollHeights)*100;
+    console.log(scrollPercentage)
     progressBar.style.width=scrollPercentage+"%"
     progressBar.style.fontSize="22px"
     progressBar.style.color="white"
