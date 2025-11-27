@@ -35,7 +35,11 @@ function mergingDuplications(arr) {
             result[currentkey] = currentValue;
         }
     }
-    return result;
+    let final = [];
+    for (let key in result) {
+        final.push({ id: Number(key), value: result[key] });
+    }
+    return final;
 }
 console.log(mergingDuplications([
     { id: 1, value: 10 },
